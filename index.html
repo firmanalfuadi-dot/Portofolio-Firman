@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firman Nauval Alfuadi | Logistics & Maritime Professional</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #3b82f6 100%);
+        }
+
+        .profile-3d {
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(145deg, #ffffff20, #ffffff05);
+        }
+
+        .profile-3d:hover {
+            transform: rotateX(8deg) rotateY(12deg) scale(1.05);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -12px rgb(0 0 0 / 0.2);
+        }
+
+        .lang-btn {
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .skill-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+        .opacity-0 {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-3">
+            <div class="flex items-center gap-3 text-2xl font-bold text-blue-700">
+                <i class="fas fa-anchor"></i>
+                <span class="text-xl md:text-2xl">FIRMAN NAUVAL</span>
+            </div>
+            <div class="flex items-center gap-5">
+                <div class="flex border rounded-full overflow-hidden shadow-sm">
+                    <button onclick="switchLanguage('id')" id="btn-id" class="lang-btn active px-5 py-2 text-sm font-medium">ID</button>
+                    <button onclick="switchLanguage('en')" id="btn-en" class="lang-btn px-5 py-2 text-sm font-medium">EN</button>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://wa.me/6285933610586" target="_blank" class="text-green-600 hover:text-green-800 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:firmannauval9@gmail.com" class="text-blue-600 hover:text-blue-800 text-2xl"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/firman-nauval-990b281a1" target="_blank" class="text-blue-700 hover:text-blue-900 text-2xl"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center mb-8 animate-fade-up">
+                <div class="profile-3d w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white/80 ring-8 ring-blue-300/40 shadow-2xl">
+                    <img src="assets/img/profil.png" alt="Firman Nauval Alfuadi" class="profile-img">
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-3 opacity-0 animate-fade-up delay-100">Firman Nauval Alfuadi</h1>
+            <p class="text-xl md:text-2xl text-blue-100 font-light opacity-0 animate-fade-up delay-200" id="hero-title">Koordinator Order Management • Profesional Maritim</p>
+            <div class="flex flex-wrap justify-center gap-3 mt-8 opacity-0 animate-fade-up delay-300">
+                <div class="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full"><i class="fas fa-phone-alt"></i><span>+62 859-3361-0586</span></div>
+                <div class="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full"><i class="fas fa-envelope"></i><span>firmannauval9@gmail.com</span></div>
+            </div>
+            <div class="flex justify-center gap-4 mt-10 opacity-0 animate-fade-up delay-300">
+                <a href="assets/img/CV FIRMAN.pdf" download class="bg-white text-blue-900 px-8 py-4 rounded-2xl font-semibold flex items-center gap-3 shadow-lg hover:shadow-xl transition">
+                    <i class="fas fa-download"></i> <span id="download-text">Download CV</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ringkasan -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800" id="summary-title">Ringkasan Profesional</h2>
+            <div class="bg-blue-50 p-8 rounded-3xl shadow-sm border-l-8 border-blue-600">
+                <p class="text-gray-700 leading-relaxed text-lg" id="summary-text">Profesional logistik dan maritim dengan lebih dari 5 tahun pengalaman...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" id="edu-title">Riwayat Pendidikan</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-7 rounded-2xl shadow-md card-hover border-t-4 border-blue-500">
+                    <i class="fas fa-ship text-3xl text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-xl">D-III Ketatalaksanaan Pelayaran Niaga & Kepelabuhanan</h3>
+                    <p class="text-blue-700 font-medium">Politeknik Maritim Negeri Indonesia</p>
+                    <p class="text-sm text-gray-500">Sep 2016 – Agu 2019 | IPK: 3.22</p>
+                </div>
+                <div class="bg-white p-7 rounded-2xl shadow-md card-hover border-t-4 border-blue-500">
+                    <i class="fas fa-chart-line text-3xl text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-xl">S1 Manajemen</h3>
+                    <p class="text-blue-700 font-medium">Universitas Terbuka</p>
+                    <p class="text-sm text-gray-500">Jan 2025 – Sekarang | IPK: 3.22</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Kerja -->
+    <section class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" id="exp-title">Pengalaman Kerja</h2>
+            <div id="experience-container" class="space-y-8"></div>
+        </div>
+    </section>
+
+    <!-- Pencapaian -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800" id="ach-title">Pencapaian Utama</h2>
+            <div id="achievements-container" class="grid md:grid-cols-2 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Keahlian & Bahasa -->
+    <section class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-10">
+                <div><h3 class="text-2xl font-bold mb-5 flex items-center gap-2"><i class="fas fa-cogs text-blue-600"></i> <span id="skills-title">Keahlian Profesional</span></h3><div id="skills-list" class="flex flex-wrap gap-2"></div></div>
+                <div><h3 class="text-2xl font-bold mb-5 flex items-center gap-2"><i class="fas fa-language text-blue-600"></i> <span id="lang-title">Bahasa</span></h3><div id="language-list" class="space-y-3"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-10 mt-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400 text-sm">© 2025 Firman Nauval Alfuadi – Logistics & Maritime Professional</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data bilingual (Indonesia & Inggris) – disesuaikan dengan CV asli
+        const contentData = {
+            id: {
+                heroTitle: "Koordinator Order Management • Profesional Maritim",
+                summary: "Profesional logistik dan maritim dengan lebih dari 5 tahun pengalaman di bidang operasional pengiriman, warehousing, order management, serta marine survey. Terlatih mengelola proses logistik secara menyeluruh, dokumen kepelabuhanan, monitoring armada, dan inspeksi kapal dengan standar keselamatan serta kepatuhan tinggi. Kuat dalam koordinasi, administrasi, dan penyelesaian masalah.",
+                downloadText: "Download CV",
+                summaryTitle: "Ringkasan Profesional",
+                eduTitle: "Riwayat Pendidikan",
+                expTitle: "Pengalaman Kerja",
+                achTitle: "Pencapaian Utama",
+                skillsTitle: "Keahlian Profesional",
+                langTitle: "Bahasa",
+                experiences: [{
+                    title: "Staff Koordinator Order Management",
+                    company: "PT. Linus Logistics – Lidah Buaya Group",
+                    period: "Jan 2025 – Sekarang",
+                    details: [
+                        "Merencanakan loading plan & routing pengiriman berdasarkan order sales untuk efisiensi distribusi",
+                        "Mengelola warehousing, stok raw material & finished good, serta koordinasi pengiriman tepat waktu",
+                        "Memantau keseluruhan proses order hingga serah terima, meningkatkan akurasi dan kelancaran operasional"
+                    ]
+                }, {
+                    title: "Admin Logistics Transport",
+                    company: "CV Sinar Joyoboyo Plastik – Lidah Buaya Group",
+                    period: "Mar 2023 – Des 2025",
+                    details: [
+                        "Monitoring armada secara real-time dari proses muat hingga barang diterima customer",
+                        "Mengelola administrasi surat jalan, pengajuan costing, return order, serta laporan harian/bulanan",
+                        "Menjaga ketepatan pengiriman dan kelengkapan dokumen logistik perusahaan manufaktur"
+                    ]
+                }, {
+                    title: "Staff Logistics",
+                    company: "PT. Friendship Logistics Line – Freight Forwarder",
+                    period: "Jun 2022 – Des 2022",
+                    details: [
+                        "Mengurus pengiriman multi-moda (kapal & trucking) hingga serah terima barang",
+                        "Menyiapkan dokumen shipping, dokumen kapal, dan dokumen trucking secara lengkap",
+                        "Berkoordinasi dengan shipping line, trucking company, dan customer untuk kelancaran operasi"
+                    ]
+                }, {
+                    title: "Food & Beverage Service Staff",
+                    company: "Whiz Hotel Malioboro",
+                    period: "Mei 2022 – Jun 2022",
+                    details: [
+                        "Mendukung operasional pelayanan makanan dan minuman bagi tamu hotel serta pemesanan eksternal",
+                        "Menjaga kualitas pelayanan dan kebersihan sesuai standar hospitality"
+                    ]
+                }, {
+                    title: "Staff Marine Surveyor",
+                    company: "PT. Global Intrima",
+                    period: "Sep 2020 – Des 2020",
+                    details: [
+                        "Melakukan inspeksi kapal menyeluruh (struktur, mesin, navigasi, komunikasi, safety equipment)",
+                        "Menyusun survey report lengkap beserta manajemen risiko untuk memastikan kapal layak berlayar",
+                        "Memberikan laporan kondisi kapal yang akurat kepada client"
+                    ]
+                }],
+                achievements: [
+                    "🚢 Merencanakan loading plan & routing efektif → ketepatan pengiriman 95%",
+                    "📦 Efisiensi pengelolaan armada via monitoring real-time → signifikan kurangi keterlambatan",
+                    "📄 Akurasi pengelolaan dokumen logistik & administrasi surat jalan di atas 97%",
+                    "⚓ Inspeksi & survey kapal menyeluruh disertai laporan teknis dan manajemen risiko berkualitas tinggi"
+                ],
+                skills: [
+                    "Order Management", "Warehouse & Loading Plan", "Routing", "Marine Survey",
+                    "Inspeksi Kapal", "Dokumen Kepelabuhanan", "Monitoring Armada", "Surat Jalan & Costing",
+                    "Microsoft Office Advanced", "HSSE", "Komunikasi Efektif", "Problem Solving", "Leadership"
+                ],
+                languages: ["Bahasa Indonesia (Mahir)", "Bahasa Inggris (Menengah)"]
+            },
+            en: {
+                heroTitle: "Order Management Coordinator • Maritime Professional",
+                summary: "Logistics and maritime professional with over 5 years of experience in shipping, warehousing, order management, and marine surveying. Skilled in end-to-end logistics, port documentation, fleet monitoring, and vessel inspection with high safety and compliance standards. Strong in coordination, administration, and problem-solving.",
+                downloadText: "Download CV",
+                summaryTitle: "Professional Summary",
+                eduTitle: "Education",
+                expTitle: "Work Experience",
+                achTitle: "Key Achievements",
+                skillsTitle: "Core Competencies",
+                langTitle: "Languages",
+                experiences: [{
+                    title: "Order Management Coordinator",
+                    company: "PT. Linus Logistics – Lidah Buaya Group",
+                    period: "Jan 2025 – Present",
+                    details: [
+                        "Plan loading & routing based on sales orders to maximize distribution efficiency",
+                        "Manage warehousing, raw material & finished good stock, and on-time delivery coordination",
+                        "Monitor end-to-end order process until handover, improving accuracy and operational flow"
+                    ]
+                }, {
+                    title: "Logistics Transport Admin",
+                    company: "CV Sinar Joyoboyo Plastik – Lidah Buaya Group",
+                    period: "Mar 2023 – Dec 2025",
+                    details: [
+                        "Real-time fleet monitoring from loading until goods received by customer",
+                        "Administer waybills, costing submissions, return orders, and daily/monthly reports",
+                        "Maintain delivery punctuality and document completeness for manufacturing logistics"
+                    ]
+                }, {
+                    title: "Logistics Staff",
+                    company: "PT. Friendship Logistics Line – Freight Forwarder",
+                    period: "Jun 2022 – Dec 2022",
+                    details: [
+                        "Handle multi-modal shipments (vessel & trucking) until handover to consignee",
+                        "Prepare shipping documents, vessel documents, and trucking documents accurately",
+                        "Coordinate with shipping lines, trucking companies, and customers for smooth freight forwarding"
+                    ]
+                }, {
+                    title: "Food & Beverage Service Staff",
+                    company: "Whiz Hotel Malioboro",
+                    period: "May 2022 – Jun 2022",
+                    details: [
+                        "Supported food & beverage service for hotel guests and external orders",
+                        "Maintained service quality and cleanliness according to hospitality standards"
+                    ]
+                }, {
+                    title: "Marine Surveyor Staff",
+                    company: "PT. Global Intrima",
+                    period: "Sep 2020 – Dec 2020",
+                    details: [
+                        "Conducted comprehensive vessel inspections (structure, engine, navigation, communication, safety)",
+                        "Compiled complete survey reports with risk management to ensure seaworthiness",
+                        "Delivered accurate vessel condition reports to clients"
+                    ]
+                }],
+                achievements: [
+                    "🚢 Effective loading plan & routing → 95% on-time delivery rate",
+                    "📦 Real-time fleet monitoring significantly reduced delivery delays",
+                    "📄 Over 97% accuracy in logistics documentation and waybill administration",
+                    "⚓ Thorough vessel inspection & survey with high-quality technical and risk reports"
+                ],
+                skills: [
+                    "Order Management", "Warehouse & Loading Plan", "Routing", "Marine Survey",
+                    "Vessel Inspection", "Shipping Documents", "Fleet Monitoring", "Waybill & Costing",
+                    "Microsoft Office Advanced", "HSSE", "Effective Communication", "Problem Solving", "Leadership"
+                ],
+                languages: ["Indonesian (Native)", "English (Intermediate)"]
+            }
+        };
+
+        function renderExperience(lang) {
+            const container = document.getElementById('experience-container');
+            container.innerHTML = '';
+            contentData[lang].experiences.forEach(exp => {
+                const detailsHtml = exp.details.map(d =>
+                    `<li class="mb-2 flex items-start gap-2"><i class="fas fa-check-circle text-blue-500 mt-1 text-sm"></i><span>${d}</span></li>`
+                ).join('');
+                container.innerHTML += `
+                    <div class="bg-gray-50 p-6 rounded-2xl shadow-md border-l-8 border-blue-500 card-hover">
+                        <div class="flex flex-wrap justify-between items-start mb-3">
+                            <div>
+                                <h3 class="text-xl font-bold">${exp.title}</h3>
+                                <p class="text-blue-700 font-semibold">${exp.company}</p>
+                            </div>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">${exp.period}</span>
+                        </div>
+                        <ul class="text-gray-600 mt-3">${detailsHtml}</ul>
+                    </div>`;
+            });
+        }
+
+        function renderAchievements(lang) {
+            const container = document.getElementById('achievements-container');
+            container.innerHTML = '';
+            contentData[lang].achievements.forEach(ach => {
+                container.innerHTML += `<div class="bg-white p-5 rounded-xl shadow flex gap-3"><i class="fas fa-trophy text-yellow-500 text-xl"></i><p>${ach}</p></div>`;
+            });
+        }
+
+        function renderSkills(lang) {
+            const container = document.getElementById('skills-list');
+            container.innerHTML = '';
+            contentData[lang].skills.forEach(s => {
+                container.innerHTML += `<span class="skill-tag">${s}</span>`;
+            });
+        }
+
+        function renderLanguages(lang) {
+            const container = document.getElementById('language-list');
+            container.innerHTML = '';
+            contentData[lang].languages.forEach(l => {
+                container.innerHTML += `<div class="flex gap-3 bg-gray-100 p-3 rounded-xl"><i class="fas fa-globe text-blue-600"></i><span>${l}</span></div>`;
+            });
+        }
+
+        function switchLanguage(lang) {
+            document.getElementById('btn-id').classList.toggle('active', lang === 'id');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+            document.getElementById('hero-title').innerText = contentData[lang].heroTitle;
+            document.getElementById('summary-text').innerText = contentData[lang].summary;
+            document.getElementById('download-text').innerText = contentData[lang].downloadText;
+            document.getElementById('summary-title').innerText = contentData[lang].summaryTitle;
+            document.getElementById('edu-title').innerText = contentData[lang].eduTitle;
+            document.getElementById('exp-title').innerText = contentData[lang].expTitle;
+            document.getElementById('ach-title').innerText = contentData[lang].achTitle;
+            document.getElementById('skills-title').innerText = contentData[lang].skillsTitle;
+            document.getElementById('lang-title').innerText = contentData[lang].langTitle;
+
+            renderExperience(lang);
+            renderAchievements(lang);
+            renderSkills(lang);
+            renderLanguages(lang);
+        }
+
+        // Inisialisasi bahasa Indonesia
+        switchLanguage('id');
+    </script>
+</body>
+</html>
